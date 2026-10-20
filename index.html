@@ -1056,5 +1056,13 @@
     renderTasks();
     updateAssigneeDropdown();
   </script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(() => console.log('Service Worker Registrato'))
+      .catch((err) => console.log('Errore SW:', err));
+  }
+</script>
+  
 </body>
 </html>
